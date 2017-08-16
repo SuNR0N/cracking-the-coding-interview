@@ -24,7 +24,7 @@ yarn test
     - [x] [Check Permutation](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/arrays-and-strings/check-permutation.ts)
     - [x] [Is Unique](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/arrays-and-strings/is-unique.ts)
     - [x] [Left Rotation](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/arrays-and-strings/left-rotation.ts)
-    - [ ] [One Away](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/arrays-and-strings/one-away.ts)
+    - [x] [One Away](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/arrays-and-strings/one-away.ts)
     - [ ] [Palindrome Permutation](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/arrays-and-strings/palindrome-permutation.ts)
     - [ ] [Rotate Matrix](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/arrays-and-strings/rotate-matrix.ts)
     - [ ] [String Compression](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/arrays-and-strings/string-compression.ts)

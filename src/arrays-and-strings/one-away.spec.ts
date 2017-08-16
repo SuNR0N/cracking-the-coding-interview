@@ -27,4 +27,9 @@ describe('oneAway', () => {
         const second = 'bake';
         expect(oneAway(first, second)).toBe(false);
     });
+
+    it('should return false if the second word is longer by two letters', () => {
+        const second = 'paleethnology';
+        expect(oneAway(first, second)).toBe(false);
+    });
 });
