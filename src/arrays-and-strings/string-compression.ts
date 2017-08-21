@@ -17,3 +17,29 @@ export function stringCompression(input: string): string {
         return input;
     }
 }
+
+/** Compresses the given input string using the counts of the repeated characters */
+export function stringCompressionV2(input: string): string {
+    let charToCompress: string = '';
+    let charCount = 0;
+    let compressed = '';
+    input.split('').forEach((value) => {
+        if (!charToCompress) {
+            charToCompress = value;
+            charCount++;
+        } else if (charToCompress === value) {
+            charCount++;
+        } else {
+            compressed += charToCompress + charCount;
+            charToCompress = value;
+            charCount = 1;
+        }
+    });
+
+    compressed += charToCompress + charCount;
+    if (compressed.length < input.length) {
+        return compressed;
+    } else {
+        return input;
+    }
+}
