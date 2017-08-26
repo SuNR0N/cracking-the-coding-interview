@@ -25,13 +25,11 @@ function checkCandidate(lettersFirst: string[], lettersSecond: string[]): boolea
     for (let i = 0; i < lengthLonger; i++) {
         if (lettersLonger[i] !== lettersShorter[i]) {
             mismatchedIndex = i;
+            lettersLonger.splice(mismatchedIndex, 1);
+            if (lengthLonger === lengthShorter) {
+                lettersShorter.splice(mismatchedIndex, 1);
+            }
             break;
-        }
-    }
-    if (mismatchedIndex !== undefined) {
-        lettersLonger.splice(mismatchedIndex, 1);
-        if (lengthLonger === lengthShorter) {
-            lettersShorter.splice(mismatchedIndex, 1);
         }
     }
 
