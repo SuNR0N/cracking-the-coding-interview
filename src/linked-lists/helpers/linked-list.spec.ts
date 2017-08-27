@@ -10,11 +10,9 @@ describe('LinkedList', () => {
 
         it('should create a linked list with the provided values', () => {
             const linkedList = LinkedList.fromValues(1, 2, 3);
-            const expectedHead = new Node(1);
-            const expectedMiddle = new Node(2);
+            const expectedHead = Node.fromValues(1, 2, 3);
+            const expectedMiddle = Node.fromValues(2, 3);
             const expectedTail = new Node(3);
-            expectedHead.next = expectedMiddle;
-            expectedMiddle.next = expectedTail;
 
             expect(linkedList.head).toEqual(expectedHead);
             expect(linkedList.head.next).toEqual(expectedMiddle);
@@ -54,9 +52,8 @@ describe('LinkedList', () => {
 
         it('should remove the node with the matching data value from the list', () => {
             const linkedList = LinkedList.fromValues(1, 2, 3);
-            const expectedHead = new Node(1);
+            const expectedHead = Node.fromValues(1, 3);
             const expectedTail = new Node(3);
-            expectedHead.next = expectedTail;
             linkedList.remove(2);
 
             expect(linkedList.head).toEqual(expectedHead);
@@ -65,9 +62,8 @@ describe('LinkedList', () => {
 
         it('should remove all nodes with the matching data value from the list', () => {
             const linkedList = LinkedList.fromValues(1, 2, 2, 3, 2);
-            const expectedHead = new Node(1);
+            const expectedHead = Node.fromValues(1, 3);
             const expectedTail = new Node(3);
-            expectedHead.next = expectedTail;
             linkedList.remove(2);
 
             expect(linkedList.head).toEqual(expectedHead);
