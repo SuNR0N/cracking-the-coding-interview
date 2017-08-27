@@ -32,3 +32,5 @@ yarn test
     - [x] [String Rotation](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/arrays-and-strings/string-rotation.ts)
     - [x] [URLify](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/arrays-and-strings/urlify.ts)
     - [x] [Zero Matrix](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/arrays-and-strings/zero-matrix.ts)
+- Linked Lists
+    - [x] [Remove Dups](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/linked-lists/remove-dups.ts)
