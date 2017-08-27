@@ -34,3 +34,4 @@ yarn test
     - [x] [Zero Matrix](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/arrays-and-strings/zero-matrix.ts)
 - Linked Lists
     - [x] [Remove Dups](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/linked-lists/remove-dups.ts)
+    - [x] [Return Kth to Last](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/linked-lists/return-kth-to-last.ts)
