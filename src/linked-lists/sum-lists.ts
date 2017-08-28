@@ -1,5 +1,9 @@
 import { LinkedList } from './helpers/linked-list';
 
+/**
+ * Converts the provided link lists to numbers in reverse order
+ * and returns the digits of their sum in reverse order as a linked list
+ */
 export function sumListsReverse(first: LinkedList, second: LinkedList): LinkedList {
     let firstStr: string = '';
     let secondStr: string = '';
@@ -35,6 +39,10 @@ export function sumListsReverse(first: LinkedList, second: LinkedList): LinkedLi
     return sumList;
 }
 
+/**
+ * Converts the provided link lists to numbers
+ * and returns the digits of their sum as a linked list
+ */
 export function sumListsForward(first: LinkedList, second: LinkedList): LinkedList {
     let firstStr: string = '';
     let secondStr: string = '';

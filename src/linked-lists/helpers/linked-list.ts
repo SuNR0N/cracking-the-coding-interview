@@ -36,17 +36,20 @@ export class LinkedList {
         }
     }
 
-    /** Appends a new node with the given number at the tail of the linked list */
-    public append(data: number): Node {
+    /**
+     * Appends a new node with the given value at the tail of the linked list.
+     * Creates a new node instance if the value is a number, otherwise uses it as is.
+     */
+    public append(value: number | Node): Node {
         if (this.head) {
             let current: Node = this.head;
             while (current.next) {
                 current = current.next;
             }
-            current.next = new Node(data);
+            current.next = (value instanceof Node) ? value : new Node(value);
             return current.next;
         } else {
-            this.head = new Node(data);
+            this.head = (value instanceof Node) ? value : new Node(value);
             return this.head;
         }
     }

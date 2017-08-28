@@ -59,6 +59,32 @@ describe('LinkedList', () => {
             expect(linkedList.getNode(1)).toBeInstanceOf(Node);
             expect(linkedList.getNode(1)).toEqual(expectedTail);
         });
+
+        it('should create a new node with the provided value and add it as the head of the list if it is empty', () => {
+            const linkedList = new LinkedList();
+            const expectedHead = new Node(1);
+            linkedList.append(1);
+
+            expect(linkedList.getNode(0)).toBeInstanceOf(Node);
+            expect(linkedList.getNode(0)).toEqual(expectedHead);
+        });
+
+        it('should add the provided node as the tail of the list', () => {
+            const head = new Node(1);
+            const linkedList = new LinkedList(head);
+            const expectedTail = new Node(2);
+            linkedList.append(expectedTail);
+
+            expect(linkedList.getNode(1)).toEqual(expectedTail);
+        });
+
+        it('should add the provided node as the head of the list if it is empty', () => {
+            const linkedList = new LinkedList();
+            const expectedHead = new Node(1);
+            linkedList.append(expectedHead);
+
+            expect(linkedList.getNode(0)).toEqual(expectedHead);
+        });
     });
 
     describe('remove', () => {
