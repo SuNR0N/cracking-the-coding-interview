@@ -1,69 +1,102 @@
 import { Node } from './node';
 
 export class LinkedList {
+    /** Creates a new linked list from the provided values */
     public static fromValues(...values: number[]): LinkedList {
-        if (values.length === 0) {
-            throw new Error('List of arguments should contain at least one number');
-        }
-        const head = new Node(values[0]);
-        const linkedList: LinkedList = new LinkedList(head);
-        for (let i = 1; i < values.length; i++) {
-            linkedList.append(values[i]);
+        const linkedList: LinkedList = new LinkedList();
+        for (const value of values) {
+            linkedList.append(value);
         }
         return linkedList;
     }
 
-    public head: Node;
+    public head: Node | undefined;
 
-    constructor(head: Node) {
+    constructor(head?: Node) {
         this.head = head;
     }
 
-    public append(data: number): Node {
-        let current: Node = this.head;
-        while (current.next) {
-            current = current.next;
+    /** Returns the nth node from the head of the linked list if it exists (zero-based) */
+    public getNode(index: number): Node | undefined {
+        if (this.head) {
+            let count = 0;
+            let current = this.head;
+            if (count === index) {
+                return current;
+            }
+            while (current.next) {
+                current = current.next;
+                count++;
+                if (count === index) {
+                    return current;
+                }
+            }
+        } else {
+            return this.head;
         }
-        current.next = new Node(data);
-        return current.next;
     }
 
-    public remove(data: number): Node {
-        let current: Node = this.head;
-        if (current.data === data) {
-            this.head = current.next;
+    /** Appends a new node with the given number at the tail of the linked list */
+    public append(data: number): Node {
+        if (this.head) {
+            let current: Node = this.head;
+            while (current.next) {
+                current = current.next;
+            }
+            current.next = new Node(data);
+            return current.next;
+        } else {
+            this.head = new Node(data);
+            return this.head;
         }
-        while (current.next) {
+    }
+
+    /** Removes all nodes with the given number from the linked list and returns the head */
+    public remove(data: number): Node | undefined {
+        if (this.head) {
+            let current: Node = this.head;
             if (current.data === data) {
                 this.head = current.next;
-                current = current.next;
-            } else if (current.next.data === data) {
-                current.next = current.next.next;
-            } else {
-                current = current.next;
+            }
+            while (current.next) {
+                if (current.data === data) {
+                    this.head = current.next;
+                    current = current.next;
+                } else if (current.next.data === data) {
+                    current.next = current.next.next;
+                } else {
+                    current = current.next;
+                }
             }
         }
         return this.head;
     }
 
+    /** Converts the linked list to a human-readable string */
     public toString() {
-        let current: Node = this.head;
-        let result = `${LinkedList.name} [ ${this.head.data}`;
-        while (current.next) {
-            result += ` -> ${current.next.data}`;
-            current = current.next;
+        let result = `${LinkedList.name} [`;
+        if (this.head) {
+            result += ` ${this.head.data}`;
+            let current: Node = this.head;
+            while (current.next) {
+                result += ` -> ${current.next.data}`;
+                current = current.next;
+            }
         }
         result += ' ]';
         return result;
     }
 
+    /** Converts the nodes of the linked list to an array */
     public toArray(): number[] {
-        let current: Node = this.head;
         const arr: number[] = [];
-        arr.push(current.data);
-        while (current.next) {
-            arr.push(current.next.data);
-            current = current.next;
+        if (this.head) {
+            let current: Node = this.head;
+            arr.push(current.data);
+            while (current.next) {
+                arr.push(current.next.data);
+                current = current.next;
+            }
         }
         return arr;
     }

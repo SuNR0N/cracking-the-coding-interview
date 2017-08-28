@@ -18,7 +18,7 @@ describe('Node', () => {
 
             expect(node).toEqual(expectedHead);
             expect(node.next).toEqual(expectedMiddle);
-            expect(node.next.next).toEqual(expectedTail);
+            expect(node.next && node.next.next).toEqual(expectedTail);
         });
     });
 

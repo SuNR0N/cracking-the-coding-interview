@@ -1,4 +1,5 @@
 export class Node {
+    /** Creates a node (with linked nodes) from the provided values */
     public static fromValues(...values: number[]): Node {
         if (values.length === 0) {
             throw new Error('List of arguments should contain at least one number');
@@ -12,13 +13,14 @@ export class Node {
         return node;
     }
 
-    public next: Node;
+    public next: Node | undefined;
     public data: number;
 
     constructor(data: number) {
         this.data = data;
     }
 
+    /** Converts the node to a human-readable string */
     public toString() {
         return `${Node.name} [ data: ${this.data}, next: ${this.next} ]`;
     }
