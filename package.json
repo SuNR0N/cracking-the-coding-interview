@@ -9,7 +9,7 @@
     "jest"
   ],
   "scripts": {
-    "lint": "tslint -c tslint.json 'src/**/*.{ts,tsx}'",
+    "lint": "tslint --type-check -c tslint.json -p tsconfig.json 'src/**/*.{ts,tsx}'",
     "pretest": "npm run lint",
     "test": "jest --coverage"
   },

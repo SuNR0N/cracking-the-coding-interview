@@ -3,6 +3,9 @@
     "rules": {
         "quotemark": [
             "single"
+        ],
+        "no-unused-variable": [
+            "true"
         ]
     }
 }

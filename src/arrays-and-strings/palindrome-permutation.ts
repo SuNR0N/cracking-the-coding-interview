@@ -14,7 +14,7 @@ export function palindromePermutation(input: string): boolean {
         }, new Map<string, number>());
 
     let numberOfOddCharacters = 0;
-    for (const [letter, count] of dict.entries()) {
+    for (const count of dict.values()) {
         if (count % 2 !== 0) {
             numberOfOddCharacters++;
             if (numberOfOddCharacters > 1) {

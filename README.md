@@ -37,3 +37,4 @@ yarn test
     - [x] [Return Kth to Last](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/linked-lists/return-kth-to-last.ts)
     - [x] [Delete Middle Node](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/linked-lists/delete-middle-node.ts)
     - [x] [Partition](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/linked-lists/partition.ts)
+    - [x] [Sum Lists](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/linked-lists/sum-lists.ts)
