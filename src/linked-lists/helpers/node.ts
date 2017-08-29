@@ -20,6 +20,22 @@ export class Node {
         this.data = data;
     }
 
+    /** Returns the nth node from the node if it exists (zero-based) */
+    public getNode(index: number): Node | undefined {
+        let count = 0;
+        let current: Node = this;
+        if (count === index) {
+            return current;
+        }
+        while (current.next) {
+            current = current.next;
+            count++;
+            if (count === index) {
+                return current;
+            }
+        }
+    }
+
     /** Converts the node to a human-readable string */
     public toString() {
         return `${Node.name} [ data: ${this.data}, next: ${this.next} ]`;

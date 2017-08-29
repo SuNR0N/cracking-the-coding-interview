@@ -34,6 +34,27 @@ describe('Node', () => {
         });
     });
 
+    describe('getNode', () => {
+        it('should return the nth node if it exists', () => {
+            const node = Node.fromValues(1, 2, 3);
+            const expected = Node.fromValues(2, 3);
+
+            expect(node.getNode(1)).toEqual(expected);
+        });
+
+        it('should return undefined if the nth node does not exist', () => {
+            const node = Node.fromValues(1, 2, 3);
+
+            expect(node.getNode(3)).toBeUndefined();
+        });
+
+        it('should return the node itself if the argument is 0', () => {
+            const node = new Node(1);
+
+            expect(node.getNode(0)).toBe(node);
+        });
+    });
+
     describe('toString', () => {
         it('should stringify the data and its next node', () => {
             const node = Node.fromValues(1, 2);
