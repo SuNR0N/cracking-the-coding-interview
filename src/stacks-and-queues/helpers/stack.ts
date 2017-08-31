@@ -1,9 +1,13 @@
-export class Stack<T> {
-    private stack: T[];
+export interface IStack<T> {
+    pop(): T;
+    push(item: T): void;
+    peek(): T;
+    isEmpty(): boolean;
+    size(): number;
+}
 
-    constructor() {
-        this.stack = [];
-    }
+export class Stack<T> implements IStack<T> {
+    private stack: T[] = [];
 
     /** Removes the top item from the stack and returns it */
     public pop(): T {
