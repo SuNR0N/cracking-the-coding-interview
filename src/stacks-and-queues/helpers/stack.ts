@@ -7,7 +7,7 @@ export interface IStack<T> {
 }
 
 export class Stack<T> implements IStack<T> {
-    private stack: T[] = [];
+    protected stack: T[] = [];
 
     /** Removes the top item from the stack and returns it */
     public pop(): T {
