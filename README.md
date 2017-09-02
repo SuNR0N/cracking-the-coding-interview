@@ -41,3 +41,5 @@ yarn test
     - [x] [Palindrome](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/linked-lists/palindrome.ts)
     - [x] [Intersection](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/linked-lists/intersection.ts)
     - [x] [Loop Detection](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/linked-lists/loop-detection.ts)
+- Stacks and Queues
+    - [x] [Three In One](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/stacks-and-queues/three-in-one.ts)
