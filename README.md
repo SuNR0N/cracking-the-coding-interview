@@ -42,5 +42,6 @@ yarn test
     - [x] [Intersection](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/linked-lists/intersection.ts)
     - [x] [Loop Detection](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/linked-lists/loop-detection.ts)
 - Stacks and Queues
-    - [x] [Three In One](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/stacks-and-queues/three-in-one.ts)
+    - [x] [Three in One](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/stacks-and-queues/three-in-one.ts)
     - [x] [Stack Min](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/stacks-and-queues/stack-min.ts)
+    - [x] [Stack of Plates](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/stacks-and-queues/stack-of-plates.ts)
