@@ -13,6 +13,7 @@ export class QueueViaStacks<T> implements IQueue<T> {
         this.tailIndex = 0;
     }
 
+    /** Adds an item to the end of the queue */
     public add(item: T): void {
         if (this.isEmpty()) {
             this.head = item;
@@ -22,6 +23,7 @@ export class QueueViaStacks<T> implements IQueue<T> {
         this.stacks[this.headIndex].push(poppedTail);
     }
 
+    /** Removes the first item in the queue and returns it */
     public remove(): T {
         if (this.isEmpty()) {
             throw new Error('The queue is empty');
@@ -41,6 +43,7 @@ export class QueueViaStacks<T> implements IQueue<T> {
         }
     }
 
+    /** Returns the first item in the queue */
     public peek(): T {
         if (this.stackSize(this.headIndex) === 0) {
             throw new Error('The queue is empty');
@@ -49,10 +52,12 @@ export class QueueViaStacks<T> implements IQueue<T> {
         }
     }
 
+    /** Returns true if and only if the queue is empty */
     public isEmpty(): boolean {
         return this.stacks.every((stack) => stack.isEmpty());
     }
 
+    /** Returns the number of elements in the queue */
     public size(): number {
         return this.stacks.reduce((previous, current) => {
             previous += current.size();
@@ -60,6 +65,7 @@ export class QueueViaStacks<T> implements IQueue<T> {
         }, 0);
     }
 
+    /** Returns the number of elements in the given stack */
     private stackSize(index: number): number {
         return this.stacks[index].size();
     }
