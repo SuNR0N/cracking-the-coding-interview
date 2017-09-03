@@ -44,4 +44,13 @@ export class Queue<T> implements IQueue<T> {
     public size(): number {
         return this.queue.length;
     }
+
+    /** Converts the queue to a human-readable string */
+    public toString(): string {
+        if (this.isEmpty()) {
+            return '[ ]';
+        } else {
+            return `[ ${this.queue.toString().replace(/,/g, ' <- ')} ]`;
+        }
+    }
 }

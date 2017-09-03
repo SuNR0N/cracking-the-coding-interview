@@ -42,4 +42,13 @@ export class Stack<T> implements IStack<T> {
     public size(): number {
         return this.stack.length;
     }
+
+    /** Converts the stack to a human-readable string */
+    public toString(): string {
+        if (this.isEmpty()) {
+            return '[ ]';
+        } else {
+            return `[ ${this.stack.toString().replace(/,/g, ' -> ')} ]`;
+        }
+    }
 }

@@ -87,4 +87,21 @@ describe('Stack', () => {
             expect(stack.size()).toBe(expected);
         });
     });
+
+    describe('toString', () => {
+        it('should stringify the stack if it is empty', () => {
+            const stack: Stack<number> = new Stack();
+
+            expect(stack.toString()).toEqual('[ ]');
+        });
+
+        it('should stringify the stack if it is not empty', () => {
+            const stack: Stack<number> = new Stack();
+            stack.push(1);
+            stack.push(2);
+            stack.push(3);
+
+            expect(stack.toString()).toEqual('[ 1 -> 2 -> 3 ]');
+        });
+    });
 });

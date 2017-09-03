@@ -45,3 +45,4 @@ yarn test
     - [x] [Three in One](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/stacks-and-queues/three-in-one.ts)
     - [x] [Stack Min](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/stacks-and-queues/stack-min.ts)
     - [x] [Stack of Plates](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/stacks-and-queues/stack-of-plates.ts)
+    - [x] [Queue via Stacks](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/stacks-and-queues/queue-via-stacks.ts)

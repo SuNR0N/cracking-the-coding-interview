@@ -97,4 +97,21 @@ describe('Queue', () => {
             expect(queue.size()).toBe(expected);
         });
     });
+
+    describe('toString', () => {
+        it('should stringify the queue if it is empty', () => {
+            const queue: Queue<number> = new Queue();
+
+            expect(queue.toString()).toEqual('[ ]');
+        });
+
+        it('should stringify the queue if it is not empty', () => {
+            const queue: Queue<number> = new Queue();
+            queue.add(1);
+            queue.add(2);
+            queue.add(3);
+
+            expect(queue.toString()).toEqual('[ 1 <- 2 <- 3 ]');
+        });
+    });
 });
