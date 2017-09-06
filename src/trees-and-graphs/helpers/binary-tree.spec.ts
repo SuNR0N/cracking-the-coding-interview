@@ -116,43 +116,25 @@ describe('BinaryTree', () => {
         });
     });
 
-    describe('traversals', () => {
-        const tree = new BinaryTree<number>(perfectBinaryTreeRoot);
+    describe('traverseInOrder', () => {
+        it('should not call the visitor function if the node is undefined', () => {
+            const tree = new BinaryTree<number>();
+            const visitorFn = jest.fn((node) => true);
 
-        describe('traverseInOrder', () => {
-            it('should visit the nodes in an in-order fashion', () => {
-                const nodes: number[] = [];
-                const visitorFn: VisitorFunction<number> = (node) => nodes.push(node.value);
-                const expected = [9, 5, 18, 10, 3, 20, 7];
+            tree.traverseInOrder(visitorFn, tree.root);
 
-                tree.traverseInOrder(tree.root, visitorFn);
-
-                expect(nodes).toEqual(expected);
-            });
+            expect(visitorFn).not.toHaveBeenCalled();
         });
 
-        describe('traversePreOrder', () => {
-            it('should visit the nodes in a pre-order fashion', () => {
-                const nodes: number[] = [];
-                const visitorFn: VisitorFunction<number> = (node) => nodes.push(node.value);
-                const expected = [10, 5, 9, 18, 20, 3, 7];
+        it('should visit the nodes in an in-order fashion', () => {
+            const tree = new BinaryTree<number>(perfectBinaryTreeRoot);
+            const nodes: number[] = [];
+            const visitorFn: VisitorFunction<number> = (node) => nodes.push(node.value);
+            const expected = [9, 5, 18, 10, 3, 20, 7];
 
-                tree.traversePreOrder(tree.root, visitorFn);
+            tree.traverseInOrder(visitorFn, tree.root);
 
-                expect(nodes).toEqual(expected);
-            });
-        });
-
-        describe('traversePostOrder', () => {
-            it('should visit the nodes in a post-order fashion', () => {
-                const nodes: number[] = [];
-                const visitorFn: VisitorFunction<number> = (node) => nodes.push(node.value);
-                const expected = [9, 18, 5, 3, 7, 20, 10];
-
-                tree.traversePostOrder(tree.root, visitorFn);
-
-                expect(nodes).toEqual(expected);
-            });
+            expect(nodes).toEqual(expected);
         });
     });
 });

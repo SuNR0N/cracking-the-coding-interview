@@ -1,15 +1,11 @@
 import { Node } from './node';
-import { Tree } from './tree';
-
-export type VisitorFunction<T> = (node: Node<T>) => any;
+import { Tree, VisitorFunction } from './tree';
 
 export interface IBinaryTree<T> {
     isComplete(): boolean;
     isFull(): boolean;
     isPerfect(): boolean;
-    traverseInOrder(node: Node<T> | undefined, visitorFn: VisitorFunction<T>): void;
-    traversePreOrder(node: Node<T> | undefined, visitorFn: VisitorFunction<T>): void;
-    traversePostOrder(node: Node<T> | undefined, visitorFn: VisitorFunction<T>): void;
+    traverseInOrder(visitorFn: VisitorFunction<T>, node?: Node<T>): void;
 }
 
 export class BinaryTree<T> extends Tree<T> implements IBinaryTree<T> {
@@ -26,54 +22,54 @@ export class BinaryTree<T> extends Tree<T> implements IBinaryTree<T> {
         return this._root;
     }
 
+    /** Checks whether every level of the tree is fully filled */
     public isComplete(): boolean {
-        throw new Error("Method not implemented.");
-    }
-
-    public isFull(): boolean {
+        const heightOfTree = this.findHeight(this.root);
         let val = true;
         try {
-            this.traverseInOrder(this.root, this.hasZeroOrTwoChildrenNodes);
+            this.traverseInOrder((node) => {
+                const level = this.getLevel(node, 0, this.root);
+                if ((level < (heightOfTree - 1) && node.numberOfRealChildren() !== 2) ||
+                    (level === (heightOfTree - 1) && !node.getChild(0) && node.getChild(1))) {
+                        throw new Error('Not a complete binary tree');
+                    }
+            }, this.root);
         } catch (err) {
             val = false;
         }
         return val;
     }
 
+    /** Checks whether every node of the tree has either zero or 2 children */
+    public isFull(): boolean {
+        let val = true;
+        try {
+            this.traverseInOrder(this.hasZeroOrTwoChildrenNodes, this.root);
+        } catch (err) {
+            val = false;
+        }
+        return val;
+    }
+
+    /** Checks whether the tree is perfect (both full and complete) */
     public isPerfect(): boolean {
         return this.isComplete() && this.isFull();
     }
 
-    public traverseInOrder(node: Node<T> | undefined, visitorFn: VisitorFunction<T>): void {
+    /**
+     * Traverses the given node and its children in an in-order fashion
+     * calling the visitor function on each and every visited node
+     */
+    public traverseInOrder(visitorFn: VisitorFunction<T>, node?: Node<T>): void {
         if (node) {
-            this.traverseInOrder(node.getChild(0), visitorFn);
+            this.traverseInOrder(visitorFn, node.getChild(0));
             visitorFn(node);
-            this.traverseInOrder(node.getChild(1), visitorFn);
-        }
-    }
-
-    public traversePreOrder(node: Node<T> | undefined, visitorFn: VisitorFunction<T>): void {
-        if (node) {
-            visitorFn(node);
-            const childrenCount = node.children.length;
-            for (let i = 0; i < childrenCount; i++) {
-                this.traversePreOrder(node.getChild(i), visitorFn);
-            }
-        }
-    }
-
-    public traversePostOrder(node: Node<T> | undefined, visitorFn: VisitorFunction<T>): void {
-        if (node) {
-            const childrenCount = node.children.length;
-            for (let i = 0; i < childrenCount; i++) {
-                this.traversePostOrder(node.getChild(i), visitorFn);
-            }
-            visitorFn(node);
+            this.traverseInOrder(visitorFn, node.getChild(1));
         }
     }
 
     private checkBinary(value: Node<T> | undefined): void {
-        this.traversePreOrder(value, this.hasMaxTwoChildrenNodes);
+        this.traversePreOrder(this.hasMaxTwoChildrenNodes, value);
     }
 
     private hasMaxTwoChildrenNodes(node: Node<T>): boolean {
