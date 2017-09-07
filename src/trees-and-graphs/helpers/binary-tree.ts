@@ -1,5 +1,6 @@
 import { Node } from './node';
-import { Tree, VisitorFunction } from './tree';
+import { Tree } from './tree';
+import { VisitorFunction } from './visitor-function';
 
 export interface IBinaryTree<T> {
     isComplete(): boolean;

@@ -1,6 +1,5 @@
 import { Node } from './node';
-
-export type VisitorFunction<T> = (node: Node<T>) => any;
+import { VisitorFunction } from './visitor-function';
 
 export interface ITree<T> {
     root: Node<T> | undefined;
