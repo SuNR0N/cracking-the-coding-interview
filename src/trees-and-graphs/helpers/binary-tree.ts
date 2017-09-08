@@ -2,14 +2,25 @@ import { Node } from './node';
 import { Tree } from './tree';
 import { VisitorFunction } from './visitor-function';
 
-export interface IBinaryTree<T> {
+export interface IBinaryTree {
     isComplete(): boolean;
     isFull(): boolean;
     isPerfect(): boolean;
-    traverseInOrder(visitorFn: VisitorFunction<T>, node?: Node<T>): void;
 }
 
-export class BinaryTree<T> extends Tree<T> implements IBinaryTree<T> {
+export class BinaryTree<T> extends Tree<T> implements IBinaryTree {
+    /**
+     * Traverses the given node and its children in an in-order fashion
+     * calling the visitor function on each and every visited node
+     */
+    public static traverseInOrder<T>(visitorFn: VisitorFunction<T>, node?: Node<T>): void {
+        if (node) {
+            this.traverseInOrder(visitorFn, node.getChild(0));
+            visitorFn(node);
+            this.traverseInOrder(visitorFn, node.getChild(1));
+        }
+    }
+
     constructor(root?: Node<T>) {
         super(root);
     }
@@ -25,10 +36,10 @@ export class BinaryTree<T> extends Tree<T> implements IBinaryTree<T> {
 
     /** Checks whether every level of the tree is fully filled */
     public isComplete(): boolean {
-        const heightOfTree = this.findHeight(this.root);
+        const heightOfTree = BinaryTree.findHeight(this.root);
         let val = true;
         try {
-            this.traverseInOrder((node) => {
+            BinaryTree.traverseInOrder((node) => {
                 const level = Tree.getLevel(node, 1, this.root);
                 if ((level < (heightOfTree - 1) && node.numberOfRealChildren() !== 2) ||
                     (level === (heightOfTree - 1) && !node.getChild(0) && node.getChild(1))) {
@@ -45,7 +56,7 @@ export class BinaryTree<T> extends Tree<T> implements IBinaryTree<T> {
     public isFull(): boolean {
         let val = true;
         try {
-            this.traverseInOrder(this.hasZeroOrTwoChildrenNodes, this.root);
+            BinaryTree.traverseInOrder(this.hasZeroOrTwoChildrenNodes, this.root);
         } catch (err) {
             val = false;
         }
@@ -57,20 +68,8 @@ export class BinaryTree<T> extends Tree<T> implements IBinaryTree<T> {
         return this.isComplete() && this.isFull();
     }
 
-    /**
-     * Traverses the given node and its children in an in-order fashion
-     * calling the visitor function on each and every visited node
-     */
-    public traverseInOrder(visitorFn: VisitorFunction<T>, node?: Node<T>): void {
-        if (node) {
-            this.traverseInOrder(visitorFn, node.getChild(0));
-            visitorFn(node);
-            this.traverseInOrder(visitorFn, node.getChild(1));
-        }
-    }
-
     private checkBinary(value: Node<T> | undefined): void {
-        this.traversePreOrder(this.hasMaxTwoChildrenNodes, value);
+        BinaryTree.traversePreOrder(this.hasMaxTwoChildrenNodes, value);
     }
 
     private hasMaxTwoChildrenNodes(node: Node<T>): boolean {

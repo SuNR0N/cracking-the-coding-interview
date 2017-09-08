@@ -1,4 +1,4 @@
-import { VisitorFunction } from './helpers/visitor-function';
+import { BinaryTree, VisitorFunction } from './helpers';
 import { minimalTree } from './minimal-tree';
 
 describe('minimalTree', () => {
@@ -6,7 +6,7 @@ describe('minimalTree', () => {
         const tree = minimalTree([]);
         const expectedHeight = 0;
 
-        expect(tree.findHeight(tree.root)).toBe(expectedHeight);
+        expect(BinaryTree.findHeight(tree.root)).toBe(expectedHeight);
     });
 
     it('should return a 1 height tree with 1 element', () => {
@@ -17,10 +17,10 @@ describe('minimalTree', () => {
         const nodes: number[] = [];
         const visitorFn: VisitorFunction<number> = (node) => nodes.push(node.value);
 
-        tree.traverseInOrder(visitorFn, tree.root);
+        BinaryTree.traverseInOrder(visitorFn, tree.root);
 
         expect(nodes).toEqual(expectedNodesInOrder);
-        expect(tree.findHeight(tree.root)).toBe(expectedHeight);
+        expect(BinaryTree.findHeight(tree.root)).toBe(expectedHeight);
     });
 
     it('should return a 2 height tree with 2 elements', () => {
@@ -31,10 +31,10 @@ describe('minimalTree', () => {
         const nodes: number[] = [];
         const visitorFn: VisitorFunction<number> = (node) => nodes.push(node.value);
 
-        tree.traverseInOrder(visitorFn, tree.root);
+        BinaryTree.traverseInOrder(visitorFn, tree.root);
 
         expect(nodes).toEqual(expectedNodesInOrder);
-        expect(tree.findHeight(tree.root)).toBe(expectedHeight);
+        expect(BinaryTree.findHeight(tree.root)).toBe(expectedHeight);
     });
 
     it('should return a 2 height tree with 3 elements', () => {
@@ -45,10 +45,10 @@ describe('minimalTree', () => {
         const nodes: number[] = [];
         const visitorFn: VisitorFunction<number> = (node) => nodes.push(node.value);
 
-        tree.traverseInOrder(visitorFn, tree.root);
+        BinaryTree.traverseInOrder(visitorFn, tree.root);
 
         expect(nodes).toEqual(expectedNodesInOrder);
-        expect(tree.findHeight(tree.root)).toBe(expectedHeight);
+        expect(BinaryTree.findHeight(tree.root)).toBe(expectedHeight);
     });
 
     it('should return a 3 height tree with 4 elements', () => {
@@ -59,10 +59,10 @@ describe('minimalTree', () => {
         const nodes: number[] = [];
         const visitorFn: VisitorFunction<number> = (node) => nodes.push(node.value);
 
-        tree.traverseInOrder(visitorFn, tree.root);
+        BinaryTree.traverseInOrder(visitorFn, tree.root);
 
         expect(nodes).toEqual(expectedNodesInOrder);
-        expect(tree.findHeight(tree.root)).toBe(expectedHeight);
+        expect(BinaryTree.findHeight(tree.root)).toBe(expectedHeight);
     });
 
     it('should return a 3 height tree with 6 elements', () => {
@@ -73,10 +73,10 @@ describe('minimalTree', () => {
         const nodes: number[] = [];
         const visitorFn: VisitorFunction<number> = (node) => nodes.push(node.value);
 
-        tree.traverseInOrder(visitorFn, tree.root);
+        BinaryTree.traverseInOrder(visitorFn, tree.root);
 
         expect(nodes).toEqual(expectedNodesInOrder);
-        expect(tree.findHeight(tree.root)).toBe(expectedHeight);
+        expect(BinaryTree.findHeight(tree.root)).toBe(expectedHeight);
     });
 
     it('should return a 4 height tree with 7 elements', () => {
@@ -87,9 +87,9 @@ describe('minimalTree', () => {
         const nodes: number[] = [];
         const visitorFn: VisitorFunction<number> = (node) => nodes.push(node.value);
 
-        tree.traverseInOrder(visitorFn, tree.root);
+        BinaryTree.traverseInOrder(visitorFn, tree.root);
 
         expect(nodes).toEqual(expectedNodesInOrder);
-        expect(tree.findHeight(tree.root)).toBe(expectedHeight);
+        expect(BinaryTree.findHeight(tree.root)).toBe(expectedHeight);
     });
 });

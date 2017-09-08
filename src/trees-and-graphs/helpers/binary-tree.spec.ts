@@ -118,21 +118,19 @@ describe('BinaryTree', () => {
 
     describe('traverseInOrder', () => {
         it('should not call the visitor function if the node is undefined', () => {
-            const tree = new BinaryTree<number>();
             const visitorFn = jest.fn((node) => true);
 
-            tree.traverseInOrder(visitorFn, tree.root);
+            BinaryTree.traverseInOrder(visitorFn);
 
             expect(visitorFn).not.toHaveBeenCalled();
         });
 
         it('should visit the nodes in an in-order fashion', () => {
-            const tree = new BinaryTree<number>(perfectBinaryTreeRoot);
             const nodes: number[] = [];
             const visitorFn: VisitorFunction<number> = (node) => nodes.push(node.value);
             const expected = [9, 5, 18, 10, 3, 20, 7];
 
-            tree.traverseInOrder(visitorFn, tree.root);
+            BinaryTree.traverseInOrder(visitorFn, perfectBinaryTreeRoot);
 
             expect(nodes).toEqual(expected);
         });

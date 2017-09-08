@@ -25,21 +25,19 @@ describe('Tree', () => {
     });
 
     describe('findHeight', () => {
-        it('should return 0 for a tree without a root', () => {
-            const tree = new Tree<number>();
+        it('should return 0 for an undefined node', () => {
             const expectedHeight = 0;
 
-            expect(tree.findHeight(tree.root)).toBe(expectedHeight);
+            expect(Tree.findHeight()).toBe(expectedHeight);
         });
 
-        it('should return 1 for a tree with a single root node', () => {
-            const tree = new Tree<number>(new Node(0));
+        it('should return 1 for a single node', () => {
             const expectedHeight = 1;
 
-            expect(tree.findHeight(tree.root)).toBe(expectedHeight);
+            expect(Tree.findHeight(new Node(0))).toBe(expectedHeight);
         });
 
-        it('should return the max height of the tree', () => {
+        it('should return the max height of the provided node', () => {
             const rootNode = new Node(10)
                 .addChild(new Node(5)
                     .addChild()
@@ -49,10 +47,9 @@ describe('Tree', () => {
                         .addChild(new Node(9))
                         .addChild())
                     .addChild(new Node(7)));
-            const tree = new Tree<number>(rootNode);
             const expectedHeight = 4;
 
-            expect(tree.findHeight(tree.root)).toBe(expectedHeight);
+            expect(Tree.findHeight(rootNode)).toBe(expectedHeight);
         });
     });
 
@@ -89,21 +86,19 @@ describe('Tree', () => {
 
     describe('traversePreOrder', () => {
         it('should not call the visitor function if the node is undefined', () => {
-            const tree = new Tree<number>();
             const visitorFn = jest.fn((node) => true);
 
-            tree.traversePreOrder(visitorFn, tree.root);
+            Tree.traversePreOrder(visitorFn);
 
             expect(visitorFn).not.toHaveBeenCalled();
         });
 
         it('should visit the nodes in a pre-order fashion', () => {
-            const tree = new Tree<number>(root);
             const nodes: number[] = [];
             const visitorFn: VisitorFunction<number> = (node) => nodes.push(node.value);
             const expected = [10, 5, 9, 18, 20, 3, 7];
 
-            tree.traversePreOrder(visitorFn, tree.root);
+            Tree.traversePreOrder(visitorFn, root);
 
             expect(nodes).toEqual(expected);
         });
@@ -111,21 +106,19 @@ describe('Tree', () => {
 
     describe('traversePostOrder', () => {
         it('should not call the visitor function if the node is undefined', () => {
-            const tree = new Tree<number>();
             const visitorFn = jest.fn((node) => true);
 
-            tree.traversePostOrder(visitorFn, tree.root);
+            Tree.traversePostOrder(visitorFn);
 
             expect(visitorFn).not.toHaveBeenCalled();
         });
 
         it('should visit the nodes in a post-order fashion', () => {
-            const tree = new Tree<number>(root);
             const nodes: number[] = [];
             const visitorFn: VisitorFunction<number> = (node) => nodes.push(node.value);
             const expected = [9, 18, 5, 3, 7, 20, 10];
 
-            tree.traversePostOrder(visitorFn, tree.root);
+            Tree.traversePostOrder(visitorFn, root);
 
             expect(nodes).toEqual(expected);
         });
