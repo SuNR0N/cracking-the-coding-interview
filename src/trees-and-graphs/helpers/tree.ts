@@ -26,15 +26,15 @@ export class Tree<T> implements ITree<T> {
         this._root = value;
     }
 
-    /** Returns the height of the given node (zero-based) */
+    /** Returns the height of the given node (one-based) */
     public findHeight(node?: Node<T>): number {
         if (!node) {
-            return -1;
+            return 0;
         } else {
             const heights: number[] = node.children
                 .map((n) => this.findHeight(n));
             const maxHeight = Math.max(...heights);
-            return (Number.isFinite(maxHeight) ? maxHeight : -1) + 1;
+            return (Number.isFinite(maxHeight) ? maxHeight : 0) + 1;
         }
     }
 

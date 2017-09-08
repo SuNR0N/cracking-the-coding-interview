@@ -140,6 +140,38 @@ describe('Node', () => {
         });
     });
 
+    describe('setChild', () => {
+        it('should set a child node with the given index if the current node has no children', () => {
+            const node = new Node<number>(1);
+            const childNode = new Node(2);
+            node.setChild(0, childNode);
+
+            expect(node.getChild(0)).toBe(childNode);
+        });
+
+        it('should set a child node with the given index if it undefined', () => {
+            const node = new Node<number>(1);
+            const childNode = new Node(3);
+            node.addChild(new Node(2));
+            node.addChild();
+            node.setChild(1, childNode);
+
+            expect(node.getChild(1)).toBe(childNode);
+            expect(node.children).toHaveLength(2);
+        });
+
+        it('should replace a child node with the given index if it exists', () => {
+            const node = new Node<number>(1);
+            const childNode = new Node(3);
+            node.addChild(new Node(2));
+            node.addChild();
+            node.setChild(0, childNode);
+
+            expect(node.getChild(0)).toBe(childNode);
+            expect(node.children).toHaveLength(2);
+        });
+    });
+
     describe('numberOfChildren', () => {
         it('should return 0 if the node has no children', () => {
             const node = new Node<number>(1);

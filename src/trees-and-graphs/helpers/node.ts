@@ -44,6 +44,11 @@ export class Node<T> implements INode<T> {
         return this._children[index];
     }
 
+    /** Sets the child node with the given index for the current node */
+    public setChild(index: number, value?: Node<T>): void {
+        this._children[index] = value;
+    }
+
     /** Returns the number children nodes of the current node which are defined */
     public numberOfRealChildren(): number {
         return this._children.filter((child) => child !== undefined).length;

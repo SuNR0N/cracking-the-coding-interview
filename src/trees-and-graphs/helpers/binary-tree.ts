@@ -30,8 +30,8 @@ export class BinaryTree<T> extends Tree<T> implements IBinaryTree<T> {
         try {
             this.traverseInOrder((node) => {
                 const level = this.getLevel(node, 0, this.root);
-                if ((level < (heightOfTree - 1) && node.numberOfRealChildren() !== 2) ||
-                    (level === (heightOfTree - 1) && !node.getChild(0) && node.getChild(1))) {
+                if ((level < (heightOfTree - 2) && node.numberOfRealChildren() !== 2) ||
+                    (level === (heightOfTree - 2) && !node.getChild(0) && node.getChild(1))) {
                         throw new Error('Not a complete binary tree');
                     }
             }, this.root);

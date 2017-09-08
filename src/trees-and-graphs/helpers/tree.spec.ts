@@ -25,16 +25,16 @@ describe('Tree', () => {
     });
 
     describe('findHeight', () => {
-        it('should return -1 for a tree without a root', () => {
+        it('should return 0 for a tree without a root', () => {
             const tree = new Tree<number>();
-            const expectedHeight = -1;
+            const expectedHeight = 0;
 
             expect(tree.findHeight(tree.root)).toBe(expectedHeight);
         });
 
-        it('should return 0 for a tree with a single root node', () => {
+        it('should return 1 for a tree with a single root node', () => {
             const tree = new Tree<number>(new Node(0));
-            const expectedHeight = 0;
+            const expectedHeight = 1;
 
             expect(tree.findHeight(tree.root)).toBe(expectedHeight);
         });
@@ -50,7 +50,7 @@ describe('Tree', () => {
                         .addChild())
                     .addChild(new Node(7)));
             const tree = new Tree<number>(rootNode);
-            const expectedHeight = 3;
+            const expectedHeight = 4;
 
             expect(tree.findHeight(tree.root)).toBe(expectedHeight);
         });
