@@ -12,17 +12,18 @@ export class Graph<T> implements IGraph<T> {
      * Traverses the given node and its children in a DFS fashion
      * calling the visitor function on each and every visited node
      */
-    public static depthFirstSearch<T>(visitorFn: VisitorFunction<T>, node?: Node<T>): void {
+    public static depthFirstSearch<T>(visitorFn: VisitorFunction<T>, node?: Node<T>, visitedNodes?: Set<Node<T>>): void {
+        visitedNodes = visitedNodes || new Set();
         if (!node) {
             return;
         }
         visitorFn(node);
-        node.marked = true;
+        visitedNodes.add(node);
         const childrenCount = node.children.length;
         for (let i = 0; i < childrenCount; i++) {
             const child = node.getChild(i);
-            if (child && child.marked !== true) {
-                this.depthFirstSearch(visitorFn, child);
+            if (child && !visitedNodes.has(child)) {
+                this.depthFirstSearch(visitorFn, child, visitedNodes);
             }
         }
     }
@@ -35,16 +36,17 @@ export class Graph<T> implements IGraph<T> {
         if (!node) {
             return;
         }
+        const markedNodes: Set<Node<T>> = new Set();
         const queue: Array<Node<T>> = [];
-        node.marked = true;
+        markedNodes.add(node);
         queue.push(node);
 
         while (queue.length !== 0) {
             const n = queue.splice(0, 1)[0];
             visitorFn(n);
             for (const child of n.children) {
-                if (child && child.marked !== true) {
-                    child.marked = true;
+                if (child && !markedNodes.has(child)) {
+                    markedNodes.add(child);
                     queue.push(child);
                 }
             }
@@ -59,11 +61,7 @@ export class Graph<T> implements IGraph<T> {
                 visitedNodes.add(visited);
             }, node);
         }
-        const numberOfNodes = visitedNodes.size;
-        for (const visited of visitedNodes.values()) {
-            visited.marked = false;
-        }
-        return numberOfNodes;
+        return visitedNodes.size;
     }
 
     public nodes: Array<Node<T>>;

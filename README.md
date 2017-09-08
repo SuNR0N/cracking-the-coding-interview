@@ -51,3 +51,4 @@ yarn test
 - Trees and Graphs
     - [x] [Route Between Nodes](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/trees-and-graphs/route-between-nodes.ts)
     - [x] [Minimal Tree](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/trees-and-graphs/minimal-tree.ts)
+    - [x] [List of Depths](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/trees-and-graphs/list-of-depths.ts)

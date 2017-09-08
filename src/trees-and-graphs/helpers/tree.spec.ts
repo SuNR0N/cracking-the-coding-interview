@@ -57,25 +57,23 @@ describe('Tree', () => {
     });
 
     describe('getLevel', () => {
-        it('should return -1 if the root of the tree is undefined', () => {
-            const tree = new Tree<number>();
-            const expectedLevel = -1;
+        it('should return 0 if the source node is undefined', () => {
+            const expectedLevel = 0;
 
-            expect(tree.getLevel(new Node(1), 0, tree.root)).toBe(expectedLevel);
+            expect(Tree.getLevel(new Node(1), 1)).toBe(expectedLevel);
         });
 
-        it('should return -1 if the node cannot be found within the tree', () => {
-            const tree = new Tree<number>(root);
-            const expectedLevel = -1;
+        it('should return 0 if the node cannot be found within the tree which root is the source node', () => {
+            const expectedLevel = 0;
 
-            expect(tree.getLevel(new Node(13), 0, tree.root)).toBe(expectedLevel);
+            expect(Tree.getLevel(new Node(13), 1, root)).toBe(expectedLevel);
         });
 
-        it('should return the level at which the node can be found within the tree if it exists', () => {
+        it('should return the level at which the node can be found within the tree which root is the source node', () => {
             const targetNode = new Node(5)
                 .addChild()
                 .addChild(new Node(6));
-            const rootNode = new Node(1)
+            const sourceNode = new Node(1)
                 .addChild()
                 .addChild(new Node(2)
                     .addChild()
@@ -83,10 +81,9 @@ describe('Tree', () => {
                         .addChild()
                         .addChild(new Node(4)
                             .addChild(targetNode))));
-            const tree = new Tree<number>(rootNode);
-            const expectedLevel = 4;
+            const expectedLevel = 5;
 
-            expect(tree.getLevel(targetNode, 0, tree.root)).toBe(expectedLevel);
+            expect(Tree.getLevel(targetNode, 1, sourceNode)).toBe(expectedLevel);
         });
     });
 

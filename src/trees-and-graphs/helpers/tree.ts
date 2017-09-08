@@ -4,12 +4,30 @@ import { VisitorFunction } from './visitor-function';
 export interface ITree<T> {
     root: Node<T> | undefined;
     findHeight(node?: Node<T>): number;
-    getLevel(targetNode: Node<T>, level: number, rootNode?: Node<T>): number;
     traversePreOrder(visitorFn: VisitorFunction<T>, node?: Node<T>): void;
     traversePostOrder(visitorFn: VisitorFunction<T>, node?: Node<T>): void;
 }
 
 export class Tree<T> implements ITree<T> {
+    /** Returns the distance in terms of levels of the target node from the root node (one-based) */
+    public static getLevel<T>(targetNode: Node<T>, level: number, sourceNode?: Node<T>): number {
+        if (!sourceNode) {
+            return 0;
+        }
+        if (sourceNode === targetNode) {
+            return level;
+        }
+        let result: number = 0;
+        const childrenCount = sourceNode.children.length;
+        for (let i = 0; i < childrenCount; i++) {
+            result = this.getLevel(targetNode, level + 1, sourceNode.getChild(i));
+            if (result !== 0) {
+                break;
+            }
+        }
+        return result;
+    }
+
     protected _root: Node<T> | undefined;
 
     constructor(root?: Node<T>) {
@@ -36,25 +54,6 @@ export class Tree<T> implements ITree<T> {
             const maxHeight = Math.max(...heights);
             return (Number.isFinite(maxHeight) ? maxHeight : 0) + 1;
         }
-    }
-
-    /** Returns the distance in terms of levels of the target node from the root node (zero-based) */
-    public getLevel(targetNode: Node<T>, level: number, rootNode?: Node<T>): number {
-        if (!rootNode) {
-            return -1;
-        }
-        if (rootNode === targetNode) {
-            return level;
-        }
-        let result: number = -1;
-        const childrenCount = rootNode.children.length;
-        for (let i = 0; i < childrenCount; i++) {
-            result = this.getLevel(targetNode, level + 1, rootNode.getChild(i));
-            if (result !== -1) {
-                break;
-            }
-        }
-        return result;
     }
 
     /**

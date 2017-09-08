@@ -12,7 +12,7 @@ export class LinkedList<T> implements ILinkedList<T> {
     public head: Node<T> | undefined;
 
     constructor(headValue?: T) {
-        if (headValue) {
+        if (headValue !== undefined) {
             this.head = new Node<T>(headValue);
         }
     }

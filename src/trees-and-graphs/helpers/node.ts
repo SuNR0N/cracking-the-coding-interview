@@ -1,6 +1,5 @@
 export interface INode<T> {
     value: T;
-    marked?: boolean;
     children: Array<Node<T> | undefined>;
     isLeaf(): boolean;
     addChild(node: Node<T> | undefined): Node<T>;
@@ -10,7 +9,6 @@ export interface INode<T> {
 
 export class Node<T> implements INode<T> {
     public value: T;
-    public marked?: boolean;
     private _children: Array<Node<T> | undefined>;
     private maxNumberOfChildren: number | undefined;
 
