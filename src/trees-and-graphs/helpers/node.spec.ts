@@ -105,6 +105,14 @@ describe('Node', () => {
             expect(node.numberOfRealChildren()).toBe(0);
         });
 
+        it('should add a new child if its defined and set its parrent to the current node', () => {
+            const parent = new Node<number>(1);
+            const child = new Node<number>(2);
+            parent.addChild(child);
+
+            expect(child.parent).toBe(parent);
+        });
+
         it('should add a new child node if a maximum is defined but it is not yet exceeded', () => {
             const node = new Node<number>(1, 1);
             node.addChild(new Node(2));
@@ -149,7 +157,7 @@ describe('Node', () => {
             expect(node.getChild(0)).toBe(childNode);
         });
 
-        it('should set a child node with the given index if it undefined', () => {
+        it('should set a child node with the given index if it is undefined', () => {
             const node = new Node<number>(1);
             const childNode = new Node(3);
             node.addChild(new Node(2));
@@ -169,6 +177,21 @@ describe('Node', () => {
 
             expect(node.getChild(0)).toBe(childNode);
             expect(node.children).toHaveLength(2);
+        });
+
+        it('should set the parent node on the child if the child is defined', () => {
+            const parent = new Node<number>(1);
+            const child = new Node<number>(2);
+            parent.setChild(0, child);
+
+            expect(child.parent).toBe(parent);
+        });
+
+        it('should set the child node as undefined on the parent if it is undefined', () => {
+            const parent = new Node<number>(1);
+            parent.setChild(0);
+
+            expect(parent.getChild(0)).toBeUndefined();
         });
     });
 

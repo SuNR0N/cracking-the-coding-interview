@@ -1,16 +1,18 @@
 export interface INode<T> {
     value: T;
+    parent?: Node<T>;
     children: Array<Node<T> | undefined>;
     isLeaf(): boolean;
-    addChild(node: Node<T> | undefined): Node<T>;
+    addChild(node?: Node<T>): Node<T>;
     getChild(index: number): Node<T> | undefined;
     numberOfRealChildren(): number;
 }
 
 export class Node<T> implements INode<T> {
     public value: T;
-    private _children: Array<Node<T> | undefined>;
-    private maxNumberOfChildren: number | undefined;
+    public parent?: Node<T>;
+    protected _children: Array<Node<T> | undefined>;
+    protected maxNumberOfChildren: number | undefined;
 
     constructor(value: T, maxNumberOfChildren?: number) {
         this.value = value;
@@ -33,6 +35,9 @@ export class Node<T> implements INode<T> {
         if (this.maxNumberOfChildren && this._children.length >= this.maxNumberOfChildren) {
             throw new Error(`Maximum child count reached (${this.maxNumberOfChildren})`);
         }
+        if (node) {
+            node.parent = this;
+        }
         this._children.push(node);
         return this;
     }
@@ -44,6 +49,9 @@ export class Node<T> implements INode<T> {
 
     /** Sets the child node with the given index for the current node */
     public setChild(index: number, value?: Node<T>): void {
+        if (value) {
+            value.parent = this;
+        }
         this._children[index] = value;
     }
 

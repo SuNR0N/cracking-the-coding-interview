@@ -54,3 +54,4 @@ yarn test
     - [x] [List of Depths](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/trees-and-graphs/list-of-depths.ts)
     - [x] [Check Balanced](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/trees-and-graphs/check-balanced.ts)
     - [x] [Validate BST](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/trees-and-graphs/validate-bst.ts)
+    - [x] [Successor](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/trees-and-graphs/successor.ts)
