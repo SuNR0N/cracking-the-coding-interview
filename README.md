@@ -55,3 +55,4 @@ yarn test
     - [x] [Check Balanced](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/trees-and-graphs/check-balanced.ts)
     - [x] [Validate BST](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/trees-and-graphs/validate-bst.ts)
     - [x] [Successor](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/trees-and-graphs/successor.ts)
+    - [x] [Build Order](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/trees-and-graphs/build-order.ts)
