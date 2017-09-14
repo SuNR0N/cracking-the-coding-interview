@@ -27,13 +27,13 @@
     "mapCoverage": true
   },
   "dependencies": {
-    "typescript": "^2.4.2"
+    "typescript": "^2.5.2"
   },
   "devDependencies": {
-    "@types/jest": "^20.0.6",
-    "jest": "^20.0.4",
-    "jest-cli": "^20.0.4",
-    "ts-jest": "^20.0.10",
-    "tslint": "^5.6.0"
+    "@types/jest": "^20.0.8",
+    "jest": "^21.1.0",
+    "jest-cli": "^21.1.0",
+    "ts-jest": "^21.0.1",
+    "tslint": "^5.7.0"
   }
 }

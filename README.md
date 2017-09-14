@@ -32,6 +32,8 @@ yarn test
     - [x] [String Rotation](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/arrays-and-strings/string-rotation.ts)
     - [x] [URLify](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/arrays-and-strings/urlify.ts)
     - [x] [Zero Matrix](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/arrays-and-strings/zero-matrix.ts)
+    - [x] [List Power Sets](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/arrays-and-strings/list-power-sets.ts)
+    - [x] [Most Frequent](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/arrays-and-strings/most-frequent.ts)
 - Linked Lists
     - [x] [Remove Dups](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/linked-lists/remove-dups.ts)
     - [x] [Return Kth to Last](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/linked-lists/return-kth-to-last.ts)
@@ -56,3 +58,9 @@ yarn test
     - [x] [Validate BST](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/trees-and-graphs/validate-bst.ts)
     - [x] [Successor](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/trees-and-graphs/successor.ts)
     - [x] [Build Order](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/trees-and-graphs/build-order.ts)
+    - [x] [First Common Ancestor](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/trees-and-graphs/first-common-ancestor.ts)
+- Bit Manipulation
+    - [x] [Count Set Bits](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/bit-manipulation/count-set-bits.ts)
+ - Math and Logic Puzzles
+    - [x] [List Primes](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/math-and-logic-puzzles/list-primes.ts)
+    - [x] [Simplify Sum of Fractions](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/math-and-logic-puzzles/simplify-sum-of-fractions.ts)
