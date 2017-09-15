@@ -21,4 +21,14 @@ describe('insertion', () => {
 
         expect(insertion(n, m, i, j)).toBe(expected);
     });
+
+    it('should insert m into n if it fits and remove additional bits from n if the specified range is longer than m', () => {
+        const n = 0b10000000000;
+        const m = 0b10011;
+        const i = 2;
+        const j = 8;
+        const expected = 0b101001100;
+
+        expect(insertion(n, m, i, j)).toBe(expected);
+    });
 });
