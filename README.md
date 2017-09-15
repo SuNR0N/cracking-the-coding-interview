@@ -61,6 +61,7 @@ yarn test
     - [x] [First Common Ancestor](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/trees-and-graphs/first-common-ancestor.ts)
 - Bit Manipulation
     - [x] [Count Set Bits](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/bit-manipulation/count-set-bits.ts)
+    - [x] [Insertion](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/bit-manipulation/insertion.ts)
  - Math and Logic Puzzles
     - [x] [List Primes](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/math-and-logic-puzzles/list-primes.ts)
     - [x] [Simplify Sum of Fractions](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/math-and-logic-puzzles/simplify-sum-of-fractions.ts)
