@@ -1,3 +1,4 @@
+/** Returns the binary string value of the provided real number if it can be represented accurately in 32 bits */
 export function binaryToString(value: number): string {
     // return value.toString(2);
     const realNumberRegExp = /^(\d{1,})(.\d{1,})$/;
