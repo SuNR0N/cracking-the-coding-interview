@@ -65,6 +65,7 @@ yarn test
     - [x] [Binary to String](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/bit-manipulation/binary-to-string.ts)
     - [x] [Next Number](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/bit-manipulation/next-number.ts)
     - [x] [Conversion](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/bit-manipulation/conversion.ts)
+    - [x] [Pairwise Swap](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/bit-manipulation/pairwise-swap.ts)
  - Math and Logic Puzzles
     - [x] [List Primes](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/math-and-logic-puzzles/list-primes.ts)
     - [x] [Simplify Sum of Fractions](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/math-and-logic-puzzles/simplify-sum-of-fractions.ts)
