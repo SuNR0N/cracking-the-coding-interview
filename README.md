@@ -32,7 +32,6 @@ yarn test
     - [x] [String Rotation](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/arrays-and-strings/string-rotation.ts)
     - [x] [URLify](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/arrays-and-strings/urlify.ts)
     - [x] [Zero Matrix](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/arrays-and-strings/zero-matrix.ts)
-    - [x] [List Power Sets](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/arrays-and-strings/list-power-sets.ts)
     - [x] [Most Frequent](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/arrays-and-strings/most-frequent.ts)
 - Linked Lists
     - [x] [Remove Dups](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/linked-lists/remove-dups.ts)
@@ -59,6 +58,10 @@ yarn test
     - [x] [Successor](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/trees-and-graphs/successor.ts)
     - [x] [Build Order](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/trees-and-graphs/build-order.ts)
     - [x] [First Common Ancestor](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/trees-and-graphs/first-common-ancestor.ts)
+    - [ ] [BST Sequences](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/trees-and-graphs/bst-sequences.ts)
+    - [ ] [Check Subtree](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/trees-and-graphs/check-subtree.ts)
+    - [ ] [Random Node](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/trees-and-graphs/random-node.ts)
+    - [ ] [Paths with Sum](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/trees-and-graphs/paths-with-sum.ts)
 - Bit Manipulation
     - [x] [Count Set Bits](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/bit-manipulation/count-set-bits.ts)
     - [x] [Insertion](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/bit-manipulation/insertion.ts)
@@ -72,3 +75,5 @@ yarn test
     - [x] [Simplify Sum of Fractions](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/math-and-logic-puzzles/simplify-sum-of-fractions.ts)
  - Object-Oriented Design
     - [x] [Deck of Cards](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/object-oriented-design/deck-of-cards)
+- Recursion and Dynamic Programming
+    - [x] [Power Set](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/recursion-and-dynamic-programming/power-set.ts)

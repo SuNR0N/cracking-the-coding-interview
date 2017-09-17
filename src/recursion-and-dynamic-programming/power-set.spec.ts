@@ -1,14 +1,14 @@
-import { listPowerSets } from './list-power-sets';
+import { powerSet } from './power-set';
 
-describe('listPowerSets', () => {
+describe('powerSet', () => {
     it('should return an empty set without any arguments', () => {
         const expected: number[][] = [
             [],
         ];
         const expectedSets = 1;
 
-        expect(listPowerSets()).toHaveLength(expectedSets);
-        expect(listPowerSets()
+        expect(powerSet()).toHaveLength(expectedSets);
+        expect(powerSet()
             .map((set) => Array.from(set))).toEqual(expect.arrayContaining(expected));
     });
 
@@ -19,8 +19,8 @@ describe('listPowerSets', () => {
         ];
         const expectedSets = 2;
 
-        expect(listPowerSets(1)).toHaveLength(expectedSets);
-        expect(listPowerSets(1)
+        expect(powerSet(1)).toHaveLength(expectedSets);
+        expect(powerSet(1)
             .map((set) => Array.from(set))).toEqual(expect.arrayContaining(expected));
     });
 
@@ -31,8 +31,8 @@ describe('listPowerSets', () => {
         ];
         const expectedSets = 2;
 
-        expect(listPowerSets(1, 1, 1)).toHaveLength(expectedSets);
-        expect(listPowerSets(1, 1, 1)
+        expect(powerSet(1, 1, 1)).toHaveLength(expectedSets);
+        expect(powerSet(1, 1, 1)
             .map((set) => Array.from(set))).toEqual(expect.arrayContaining(expected));
     });
 
@@ -49,8 +49,8 @@ describe('listPowerSets', () => {
         ];
         const expectedSets = 8;
 
-        expect(listPowerSets(1, 2, 3)).toHaveLength(expectedSets);
-        expect(listPowerSets(1, 2, 3)
+        expect(powerSet(1, 2, 3)).toHaveLength(expectedSets);
+        expect(powerSet(1, 2, 3)
             .map((set) => Array.from(set))).toEqual(expect.arrayContaining(expected));
     });
 });

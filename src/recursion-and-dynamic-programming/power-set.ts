@@ -1,5 +1,5 @@
 /** Returns the power sets of the given set of numbers */
-export function listPowerSets(...values: number[]): Array<Set<number>> {
+export function powerSet(...values: number[]): Array<Set<number>> {
     const set = new Set(values);
     const sets: Array<Set<number>> = [];
     for (const value of set) {
