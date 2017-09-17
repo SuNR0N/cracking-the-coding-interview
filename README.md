@@ -70,3 +70,5 @@ yarn test
  - Math and Logic Puzzles
     - [x] [List Primes](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/math-and-logic-puzzles/list-primes.ts)
     - [x] [Simplify Sum of Fractions](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/math-and-logic-puzzles/simplify-sum-of-fractions.ts)
+ - Object-Oriented Design
+    - [x] [Deck of Cards](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/object-oriented-design/deck-of-cards)
