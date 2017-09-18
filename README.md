@@ -76,4 +76,5 @@ yarn test
  - Object-Oriented Design
     - [x] [Deck of Cards](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/object-oriented-design/deck-of-cards)
 - Recursion and Dynamic Programming
+    - [x] [Triple Step](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/recursion-and-dynamic-programming/triple-step.ts)
     - [x] [Power Set](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/recursion-and-dynamic-programming/power-set.ts)
