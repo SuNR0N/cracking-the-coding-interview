@@ -78,4 +78,5 @@ yarn test
 - Recursion and Dynamic Programming
     - [x] [Triple Step](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/recursion-and-dynamic-programming/triple-step.ts)
     - [x] [Robot in a Grid](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/recursion-and-dynamic-programming/robot-in-a-grid.ts)
+    - [x] [Magic Index](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/recursion-and-dynamic-programming/magic-index.ts)
     - [x] [Power Set](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/recursion-and-dynamic-programming/power-set.ts)
