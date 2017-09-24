@@ -81,3 +81,4 @@ yarn test
     - [x] [Magic Index](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/recursion-and-dynamic-programming/magic-index.ts)
     - [x] [Power Set](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/recursion-and-dynamic-programming/power-set.ts)
     - [x] [Recursive Multiply](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/recursion-and-dynamic-programming/recursive-multiply.ts)
+    - [x] [Towers of Hanoi](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/recursion-and-dynamic-programming/towers-of-hanoi.ts)
