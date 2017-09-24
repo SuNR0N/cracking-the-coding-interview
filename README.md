@@ -82,3 +82,5 @@ yarn test
     - [x] [Power Set](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/recursion-and-dynamic-programming/power-set.ts)
     - [x] [Recursive Multiply](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/recursion-and-dynamic-programming/recursive-multiply.ts)
     - [x] [Towers of Hanoi](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/recursion-and-dynamic-programming/towers-of-hanoi.ts)
+    - [ ] [Permutations without Dups](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/recursion-and-dynamic-programming/permutations-without-dups.ts)
+    - [ ] [Permutations with Dups](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/recursion-and-dynamic-programming/permutations-with-dups.ts)
