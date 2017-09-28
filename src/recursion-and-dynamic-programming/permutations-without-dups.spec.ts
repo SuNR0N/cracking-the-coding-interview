@@ -6,7 +6,7 @@ describe('permutationsWithoutDups', () => {
 
         expect(() => {
             permutationsWithoutDups(input);
-        }).toThrow();
+        }).toThrow('Invalid input');
     });
 
     it('should return one permutation for a string with a length of 1', () => {

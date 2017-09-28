@@ -84,3 +84,4 @@ yarn test
     - [x] [Towers of Hanoi](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/recursion-and-dynamic-programming/towers-of-hanoi.ts)
     - [x] [Permutations without Dups](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/recursion-and-dynamic-programming/permutations-without-dups.ts)
     - [x] [Permutations with Dups](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/recursion-and-dynamic-programming/permutations-with-dups.ts)
+    - [x] [Parens](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/recursion-and-dynamic-programming/parens.ts)
