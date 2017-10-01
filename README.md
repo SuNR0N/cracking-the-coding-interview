@@ -87,3 +87,4 @@ yarn test
     - [x] [Parens](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/recursion-and-dynamic-programming/parens.ts)
     - [x] [Paint Fill](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/recursion-and-dynamic-programming/paint-fill.ts)
     - [x] [Coins](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/recursion-and-dynamic-programming/coins.ts)
+    - [x] [Eight Queens](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/recursion-and-dynamic-programming/eight-queens.ts)
