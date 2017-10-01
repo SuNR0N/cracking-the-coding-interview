@@ -18,6 +18,12 @@ yarn lint
 yarn test
 ```
 
+## Running unit tests in watch mode
+
+```
+yarn test:watch
+```
+
 ## List of challenges
 
 - Arrays and Strings
@@ -88,3 +94,4 @@ yarn test
     - [x] [Paint Fill](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/recursion-and-dynamic-programming/paint-fill.ts)
     - [x] [Coins](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/recursion-and-dynamic-programming/coins.ts)
     - [x] [Eight Queens](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/recursion-and-dynamic-programming/eight-queens.ts)
+    - [x] [Stack of Boxes](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/recursion-and-dynamic-programming/stack-of-boxes.ts)
