@@ -95,3 +95,6 @@ yarn test:watch
     - [x] [Coins](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/recursion-and-dynamic-programming/coins.ts)
     - [x] [Eight Queens](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/recursion-and-dynamic-programming/eight-queens.ts)
     - [x] [Stack of Boxes](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/recursion-and-dynamic-programming/stack-of-boxes.ts)
+    - [x] [Boolean Evaluation](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/recursion-and-dynamic-programming/boolean-evaluation.ts)
+- Sorting and Searching
+    - [x] [Sorted Merge](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/sorting-and-searching/sorted-merge.ts)
