@@ -99,3 +99,4 @@ yarn test:watch
 - Sorting and Searching
     - [x] [Sorted Merge](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/sorting-and-searching/sorted-merge.ts)
     - [x] [Group Anagrams](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/sorting-and-searching/group-anagrams.ts)
+    - [x] [Search in Rotated Array](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/sorting-and-searching/search-in-rotated-array.ts)
