@@ -1,5 +1,5 @@
 describe('pathWithSum', () => {
-    it('', () => {
-        // TODO
-    });
+  it('', () => {
+    // TODO
+  });
 });

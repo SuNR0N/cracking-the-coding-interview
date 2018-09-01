@@ -1,21 +1,27 @@
 {
-    "extends": "tslint:recommended",
-    "rules": {
-        "quotemark": [
-            "single"
-        ],
-        "no-unused-variable": [
-            "true"
-        ],
-        "variable-name": [
-            true,
-            "ban-keywords",
-            "check-format",
-            "allow-leading-underscore"
-        ],
-        "max-line-length": [
-            true,
-            140
-        ]
-    }
+  "defaultSeverity": "error",
+  "extends": [
+    "tslint:recommended"
+  ],
+  "jsRules": {},
+  "rules": {
+    "max-line-length": [
+      true,
+      140
+    ],
+    "quotemark": [
+      true,
+      "single",
+      "avoid-escape"
+    ],
+    "variable-name": [
+      true,
+      "ban-keywords",
+      "check-format",
+      "allow-leading-underscore",
+      "allow-pascal-case",
+      "allow-snake-case"
+    ]
+  },
+  "rulesDirectory": []
 }

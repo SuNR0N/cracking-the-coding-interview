@@ -1,14 +1,14 @@
 export interface ICard {
-    value: any;
-    toString(): string;
+  value: any;
+  toString(): string;
 }
 
 export abstract class Card implements ICard {
-    public value: any;
+  public value: any;
 
-    constructor(value: any) {
-        this.value = value;
-    }
+  constructor(value: any) {
+    this.value = value;
+  }
 
-    public abstract toString(): string;
+  public abstract toString(): string;
 }

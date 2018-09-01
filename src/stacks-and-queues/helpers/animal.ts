@@ -1,3 +1,3 @@
 export abstract class Animal {
-    public abstract toString(): string;
+  public abstract toString(): string;
 }

@@ -1,5 +1,5 @@
 describe('randomNode', () => {
-    it('', () => {
-        // TODO
-    });
+  it('', () => {
+    // TODO
+  });
 });

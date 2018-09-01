@@ -1,5 +1,5 @@
 describe('checkSubtree', () => {
-    it('', () => {
-        // TODO
-    });
+  it('', () => {
+    // TODO
+  });
 });

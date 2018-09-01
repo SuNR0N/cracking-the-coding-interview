@@ -2,39 +2,37 @@
   "name": "cracking-the-coding-interview",
   "version": "1.0.0",
   "description": "Cracking the Coding Interview Challenges",
-  "author": "Norbert Annus",
+  "author": "annus.norbert@gmail.com",
   "license": "MIT",
   "keywords": [
     "typescript",
     "jest"
   ],
   "scripts": {
-    "lint": "tslint --type-check -c tslint.json -p tsconfig.json 'src/**/*.{ts,tsx}'",
+    "lint": "tslint -p tsconfig.json",
     "pretest": "npm run lint",
     "test": "jest --coverage",
     "test:watch": "jest --watch"
   },
+  "devDependencies": {
+    "@types/jest": "^23.3.1",
+    "jest": "^23.5.0",
+    "ts-jest": "^23.1.4",
+    "tslint": "^5.11.0",
+    "typescript": "^3.0.3"
+  },
   "jest": {
     "transform": {
-      ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+      "^.+\\.tsx?$": "ts-jest"
     },
-    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
     "moduleFileExtensions": [
       "ts",
       "tsx",
       "js",
-      "json"
-    ],
-    "mapCoverage": true
-  },
-  "dependencies": {
-    "typescript": "^2.5.2"
-  },
-  "devDependencies": {
-    "@types/jest": "^20.0.8",
-    "jest": "^21.1.0",
-    "jest-cli": "^21.1.0",
-    "ts-jest": "^21.0.1",
-    "tslint": "^5.7.0"
+      "jsx",
+      "json",
+      "node"
+    ]
   }
 }
