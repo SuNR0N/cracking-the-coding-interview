@@ -83,6 +83,9 @@ yarn test:watch
     - [x] [Number Swapper](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/moderate/number-swapper.ts)
     - [x] [Intersection](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/moderate/intersection.ts)
     - [x] [Tic Tac Win](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/moderate/tic-tac-win.ts)
+    - [x] [Factorial Zeros](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/moderate/factorial-zeros.ts)
+    - [x] [Smallest Difference](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/moderate/smallest-difference.ts)
+    - [ ] [Number Max](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/moderate/number-max.ts)
 - Object-Oriented Design
     - [x] [Deck of Cards](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/object-oriented-design/deck-of-cards)
 - Recursion and Dynamic Programming
