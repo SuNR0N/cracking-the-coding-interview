@@ -76,10 +76,14 @@ yarn test:watch
     - [x] [Conversion](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/bit-manipulation/conversion.ts)
     - [x] [Pairwise Swap](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/bit-manipulation/pairwise-swap.ts)
     - [x] [Draw Line](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/bit-manipulation/draw-line.ts)
- - Math and Logic Puzzles
+- Math and Logic Puzzles
     - [x] [List Primes](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/math-and-logic-puzzles/list-primes.ts)
     - [x] [Simplify Sum of Fractions](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/math-and-logic-puzzles/simplify-sum-of-fractions.ts)
- - Object-Oriented Design
+- Moderate
+    - [x] [Number Swapper](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/moderate/number-swapper.ts)
+    - [x] [Intersection](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/moderate/intersection.ts)
+    - [x] [Tic Tac Win](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/moderate/tic-tac-win.ts)
+- Object-Oriented Design
     - [x] [Deck of Cards](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/object-oriented-design/deck-of-cards)
 - Recursion and Dynamic Programming
     - [x] [Triple Step](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/recursion-and-dynamic-programming/triple-step.ts)
