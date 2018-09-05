@@ -113,3 +113,6 @@ yarn test:watch
 - Custom
     - [x] [LRU Cache](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/custom/lru-cache.ts)
     - [x] [Word Search](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/custom/word-search.ts)
+    - [ ] [Flip Bits](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/custom/flip-bits.ts)
+    - [ ] [Nearest Points](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/custom/nearest-points.ts)
+    - [ ] [Shortest Paths](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/custom/shortest-paths.ts)
