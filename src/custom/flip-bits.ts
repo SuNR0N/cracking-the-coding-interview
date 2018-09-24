@@ -9,5 +9,24 @@
  * @param cycles Number of cycles
  */
 export function flipBits(bits: number[], cycles: number): number[] {
-  throw new Error('Not implemented');
+  const isValid = bits.every((bit) => bit === 0 || bit === 1);
+  if (!isValid) {
+    throw new Error('Invalid bits array');
+  }
+  if (!Number.isInteger(cycles) || cycles < 0) {
+    throw new Error('Number of cycles should be a non negative integer');
+  }
+  for (let i = 0; i < cycles; i++) {
+    bits = bits.map((_bit, index, arr) => {
+      const leftNeighbour = arr[index - 1] || 0;
+      const rightNeighbour = arr[index + 1] || 0;
+      if (leftNeighbour === 0 && rightNeighbour === 0 || leftNeighbour === 1 && rightNeighbour === 1) {
+        return 1;
+      } else {
+        return 0;
+      }
+    });
+  }
+
+  return bits;
 }

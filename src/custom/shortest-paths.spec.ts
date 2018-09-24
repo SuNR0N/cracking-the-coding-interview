@@ -95,7 +95,7 @@ describe('shortestPaths', () => {
     ]);
   });
 
-  it('should return a single path if multiple routes exist between A and B but only one is the shortest', () => {
+  fit('should return a single path if multiple routes exist between A and B but only one is the shortest', () => {
     const map = [
       ['A', 1, 1, 0, 1, 1, 1],
       [1, 0, 1, 0, 1, 0, 1],
