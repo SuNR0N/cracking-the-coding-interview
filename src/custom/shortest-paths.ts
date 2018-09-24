@@ -49,28 +49,56 @@ export function shortestPaths(map: Array<Array<string | number>>): number[][][] 
   return [];
 }
 
+interface INode {
+  parent?: INode;
+  children: INode[];
+  level: number;
+  coordinate: [number, number];
+}
+
 function bfs(
   map: Array<Array<string | number>>,
   coordinate: [number, number],
-  parent?: string,
+  // parent?: string,
 ): number {
+  const nodes: Map<string, INode> = new Map();
+  const root: INode = {
+    children: [],
+    coordinate,
+    level: 0,
+  };
   const key = coordinate.toString();
+  nodes.set(key, root);
   const marked = new Set<string>([key]);
   const queue = [key];
   while (queue.length !== 0) {
     const n = queue.shift();
+    const node = nodes.get(n!);
+    const [r, c] = node!.coordinate;
+    if (map[r][c] === 'B') {
+      // tslint:disable
+      console.log(node);
+    }
     const coord = n!.split(',').map(Number) as [number, number];
-    // tslint:disable
-    console.log(n, marked.size);
+    // console.log(n, marked.size);
     const children = getChildren(map, coord);
     for (const child of children) {
       const childKey = child.toString();
+      const childNode: INode = {
+        children: [],
+        coordinate: child,
+        level: node!.level + 1,
+        parent: node!,
+      };
+      node!.children.push(childNode);
+      nodes.set(childKey, childNode);
       if (!marked.has(childKey)) {
         marked.add(childKey);
         queue.push(childKey);
       }
     }
   }
+  console.log(root);
   return -1;
 }
 
