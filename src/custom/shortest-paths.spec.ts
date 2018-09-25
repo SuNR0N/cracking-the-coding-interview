@@ -46,7 +46,7 @@ describe('shortestPaths', () => {
     ];
     expect(() => {
       shortestPaths(map);
-    }).toThrow('Invalid map - multile destination points');
+    }).toThrow('Invalid map - multiple destination points');
   });
 
   it('should throw an error if the map has invalid symbols', () => {
@@ -59,6 +59,18 @@ describe('shortestPaths', () => {
     expect(() => {
       shortestPaths(map);
     }).toThrow('Invalid map - unknown symbol');
+  });
+
+  it('should throw an error if the map has an invalid dimension', () => {
+    const map = [
+      ['A', 0, 0, 0],
+      [1, 1, 0, 0, 1],
+      [0, 1, 1, 0],
+      [0, 0, 1, 'B'],
+    ];
+    expect(() => {
+      shortestPaths(map);
+    }).toThrow('Invalid map - dimension');
   });
 
   it('should return an empty list if no path exists between A and B', () => {
@@ -85,17 +97,17 @@ describe('shortestPaths', () => {
     expect(paths).toEqual([
       [
         [0, 0],
-        [0, 1],
+        [1, 0],
         [1, 1],
-        [1, 2],
+        [2, 1],
         [2, 2],
-        [2, 3],
+        [3, 2],
         [3, 3],
       ],
     ]);
   });
 
-  fit('should return a single path if multiple routes exist between A and B but only one is the shortest', () => {
+  it('should return a single path if multiple routes exist between A and B but only one is the shortest', () => {
     const map = [
       ['A', 1, 1, 0, 1, 1, 1],
       [1, 0, 1, 0, 1, 0, 1],
@@ -108,16 +120,16 @@ describe('shortestPaths', () => {
     expect(paths).toEqual([
       [
         [0, 0],
-        [0, 1],
-        [0, 2],
-        [0, 3],
-        [0, 4],
-        [1, 4],
-        [2, 4],
-        [3, 4],
+        [1, 0],
+        [2, 0],
+        [3, 0],
+        [4, 0],
+        [4, 1],
+        [4, 2],
+        [4, 3],
         [4, 4],
-        [5, 4],
-        [6, 4],
+        [4, 5],
+        [4, 6],
       ],
     ]);
   });
@@ -139,24 +151,24 @@ describe('shortestPaths', () => {
         [0, 2],
         [0, 3],
         [0, 4],
-        [1, 4],
-        [2, 4],
-        [3, 4],
-        [4, 4],
-        [5, 4],
-        [6, 4],
-      ],
-      [
-        [0, 0],
-        [0, 1],
-        [0, 2],
-        [0, 3],
-        [0, 4],
         [0, 5],
         [0, 6],
         [1, 6],
         [2, 6],
         [3, 6],
+        [4, 6],
+      ],
+      [
+        [0, 0],
+        [1, 0],
+        [2, 0],
+        [3, 0],
+        [4, 0],
+        [4, 1],
+        [4, 2],
+        [4, 3],
+        [4, 4],
+        [4, 5],
         [4, 6],
       ],
     ]);

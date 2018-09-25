@@ -115,4 +115,4 @@ yarn test:watch
     - [x] [Word Search](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/custom/word-search.ts)
     - [x] [Flip Bits](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/custom/flip-bits.ts)
     - [x] [Nearest Points](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/custom/nearest-points.ts)
-    - [ ] [Shortest Paths](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/custom/shortest-paths.ts)
+    - [x] [Shortest Paths](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/custom/shortest-paths.ts)
