@@ -86,9 +86,11 @@ yarn test:watch
     - [x] [Factorial Zeros](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/moderate/factorial-zeros.ts)
     - [x] [Smallest Difference](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/moderate/smallest-difference.ts)
     - [ ] [Number Max](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/moderate/number-max.ts)
-    - [X] [English Int](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/moderate/english-int.ts)
+    - [x] [English Int](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/moderate/english-int.ts)
     - [ ] [Operations](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/moderate/operations.ts)
-    - [X] [Living People](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/moderate/living-people.ts)
+    - [x] [Living People](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/moderate/living-people.ts)
+    - [x] [Diving Board](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/moderate/diving-board.ts)
+    - [x] [XML Encoding](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/moderate/xml-encoding.ts)
 - Object-Oriented Design
     - [x] [Deck of Cards](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/object-oriented-design/deck-of-cards)
 - Recursion and Dynamic Programming
