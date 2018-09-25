@@ -91,6 +91,7 @@ yarn test:watch
     - [x] [Living People](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/moderate/living-people.ts)
     - [x] [Diving Board](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/moderate/diving-board.ts)
     - [x] [XML Encoding](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/moderate/xml-encoding.ts)
+    - [x] [Master Mind](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/moderate/master-mind.ts)
 - Object-Oriented Design
     - [x] [Deck of Cards](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/object-oriented-design/deck-of-cards)
 - Recursion and Dynamic Programming
