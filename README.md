@@ -120,3 +120,4 @@ yarn test:watch
     - [x] [Flip Bits](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/custom/flip-bits.ts)
     - [x] [Nearest Points](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/custom/nearest-points.ts)
     - [x] [Shortest Paths](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/custom/shortest-paths.ts)
+    - [x] [Roman Numeral](https://github.com/SuNR0N/cracking-the-coding-interview/blob/master/src/custom/roman-numeral.ts)
